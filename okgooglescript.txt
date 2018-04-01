@@ -1,0 +1,7 @@
+tell application "Google Chrome" to activate
+tell application "Google Chrome" to open location "http://www.google.com"
+delay 2
+tell application "System Events"
+      key code 47 using(command down, shift down)
+      end tell
+      do shell script "afplay /System/Library/Sounds/Tink.aiff"
