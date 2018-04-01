@@ -1,0 +1,43 @@
+
+on is_running(appName)
+   tell application "System Events" to (name of processes) contains appName
+end is_running
+
+set chRunning to is_running("Google Chrome")
+set not_open to not chRunning
+
+tell application "Google Chrome"
+     try
+	set myTab to active tab of front window
+	    if URL of myTab does not start with "https://www.google" or URL of myTab contains "start" then
+	       	   set not_open to true
+		       		if chRunning then
+						set myWindow to make new window
+						    	     else
+										set myWindow to front window
+										    	     end if
+													activate
+															set myTab to active tab of myWindow
+															    	  set URL of myTab to "https://www.google.com"
+																      else
+																        activate
+																	 end if
+																	 on error
+																	    set not_open to true
+																	    	if chRunning then
+																		   	     set myWindow to make new window
+																			     	 else
+																				   set myWindow to front window
+																				       end if
+																				       	   activate
+																					    set myTab to active tab of myWindow
+																					    	set URL of myTab to "https://www.google.com"
+																						end try
+end tell
+
+if not_open then delay 2
+
+tell application "System Events"
+     key code 47 using {command down, shift down}
+end tell
+do shell script "afplay /System/Library/Sounds/Tink.aiff"
