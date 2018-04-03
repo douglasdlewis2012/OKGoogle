@@ -7,9 +7,9 @@ Installation steps:
 4. Select Dicatation Commands
 5. Add Command 
 -------------------------------
-    5. When I say: "google" 1
-    5. While using "Any application" 1
-    5. Perform "Run <script>''' 1
+    When I say: "google" 
+    While using "Any application" 
+    Perform "Run <script>''' 
        
 
 Setup Script:
