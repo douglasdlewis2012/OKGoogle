@@ -5,10 +5,11 @@ Installation steps:
 2. Enable "dictation keyword phrase"
 3. Set "ok" as dictation keyword phrase
 4. Select Dicatation Commands
-5. Add Command +
-    5. When I say: "google"
-    5. While using "Any application"
-    5. Perform "Run <script>'''
+5. Add Command 
+-------------------------------
+    5. When I say: "google" 1
+    5. While using "Any application" 1
+    5. Perform "Run <script>''' 1
        
 
 Setup Script:
