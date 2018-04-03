@@ -6,9 +6,9 @@ Installation steps:
 3. Set "ok" as dictation keyword phrase
 4. Select Dicatation Commands
 5. Add Command +
-       '''\n When I say: "google"
-       While using "Any application"
-       Perform "Run <script>'''
+    5. When I say: "google"
+    5. While using "Any application"
+    5. Perform "Run <script>'''
        
 
 Setup Script:
